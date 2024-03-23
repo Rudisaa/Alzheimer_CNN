@@ -1,3 +1,4 @@
 # Alzheimer CNN
 
-this a test
+
+Creating program that looks for alzheimer in mri scans
