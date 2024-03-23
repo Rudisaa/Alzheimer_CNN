@@ -31,6 +31,7 @@ training = ImageFolder(trainingSet , transform=transform)
 test = ImageFolder(testSet, transform=transform)
 
 # dataloaders
+# creates an iterable dataset object
 trainingLoader = DataLoader(training, batch_size=64, shuffle=True)
 testLoader = DataLoader(test, batch_size=64, shuffle=False)
 
