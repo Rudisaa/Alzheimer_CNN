@@ -10,11 +10,15 @@ from sklearn.metrics import confusion_matrix;
 import matplotlib.pyplot as plt;
 import cv2;
 import os;
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # paths for the data
-datasetPath = '/Users/rudisargueta/Documents/Alzheimer_CNN/AlzheimersDataset'
+datasetPath = os.getenv('DATASET')
 
 trainingSet = os.path.join(datasetPath, 'test')
 testSet = os.path.join(datasetPath, 'test')
@@ -35,7 +39,8 @@ test = ImageFolder(testSet, transform=transform)
 trainingLoader = DataLoader(training, batch_size=64, shuffle=True)
 testLoader = DataLoader(test, batch_size=64, shuffle=False)
 
-#
+# Creating a CNN 
+
 
 
 
