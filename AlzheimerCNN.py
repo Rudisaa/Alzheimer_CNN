@@ -70,8 +70,7 @@ class CNN(nn.Module):
     
 
 model = CNN()
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 
-input = torch.randn(1,3,128,128)
-
-output = model(input)
