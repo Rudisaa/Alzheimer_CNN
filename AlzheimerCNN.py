@@ -12,6 +12,7 @@ import cv2;
 
 
 
+# preprocessing mri images from kaggale
 
 
 
