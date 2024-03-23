@@ -46,8 +46,8 @@ m = nn.MaxPool2d(2,2)
 input = torch.randn(1,3,64,64)
 output = m(input)
 print(output.shape)
-# Creating a CNN 
 
+# Creating a CNN 
 class CNN(nn.Module):
     def __init__(self):
         super(CNN, self).__init__() 
